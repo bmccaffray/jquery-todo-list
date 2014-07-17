@@ -1,0 +1,28 @@
+<head>
+  <script>
+    $(document).ready(function () {
+        $('body').on('click', '.addTodoBtn', function () {
+            var inputValue = $('.addTodoTxt').val();
+    
+            if (inputValue.length < 2 || $.isNumeric(inputValue)) {
+                alert("Please add a task for the todo list.");
+            } else {
+                var todoText = $('<li class="todoTask">' + inputValue + '</li>');
+                $('.todoList').append(todoText);
+                $('.addTodoTxt').val("");
+            }
+        });
+    
+        $('.todoList').on('click', '.todoTask', function (e) {
+            $(this).remove();
+        });
+    });
+  </script>
+</head>
+<body>
+  <h3>Todo List!</h3>
+
+  <button class="addTodoBtn">Add todo</button>
+  <input class="addTodoTxt" type="text" />
+  <ul class="todoList"></ul>
+</body>
