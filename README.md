@@ -2,4 +2,4 @@
 
 Simple jQuery app to manage todos<br/>
 
-<a href="http://jsfiddle.net/bmccaffray/556DG/">DEMO</a>
+<a href="http://jsfiddle.net/bmccaffray/556DG/" target="_blank">DEMO</a>
